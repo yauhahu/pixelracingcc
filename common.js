@@ -111,7 +111,7 @@ var Game = {  // a modified version of the game loop from my previous boulderdas
           update = options.update,    // method to update game logic is provided by caller
           render = options.render,    // method to render the game is provided by caller
           step   = options.step,      // fixed frame step (1/fps) is specified by caller
-          stats  = options.stats,     // stats instance is provided by caller
+//          stats  = options.stats,     // stats instance is provided by caller
           now    = null,
           last   = Util.timestamp(),
           dt     = 0,
@@ -126,7 +126,7 @@ var Game = {  // a modified version of the game loop from my previous boulderdas
           update(step);
         }
         render();
-        stats.update();
+//        stats.update();
         last = now;
         requestAnimationFrame(frame, canvas);
       }
@@ -175,6 +175,7 @@ var Game = {  // a modified version of the game loop from my previous boulderdas
 
   //---------------------------------------------------------------------------
 
+/*
   stats: function(parentId, id) { // construct mr.doobs FPS counter - along with friendly good/bad/ok message box
 
     var result = new Stats();
@@ -201,10 +202,11 @@ var Game = {  // a modified version of the game loop from my previous boulderdas
     return result;
   },
 
+*/
   //---------------------------------------------------------------------------
 
   playMusic: function() {
-    var music = Dom.get('music');
+/*    var music = Dom.get('music');
     music.loop = true;
     music.volume = 0.05; // shhhh! annoying music!
     music.muted = (Dom.storage.muted === "true");
@@ -213,7 +215,7 @@ var Game = {  // a modified version of the game loop from my previous boulderdas
     Dom.on('mute', 'click', function() {
       Dom.storage.muted = music.muted = !music.muted;
       Dom.toggleClassName('mute', 'on', music.muted);
-    });
+    }); */
   }
 
 }
@@ -356,9 +358,9 @@ var KEY = {
 var COLORS = {
   SKY:  '#72D7EE',
   TREE: '#005108',
-  FOG:  '#005108',
-  LIGHT:  { road: '#6B6B6B', grass: '#10AA10', rumble: '#555555', lane: '#CCCCCC'  },
-  DARK:   { road: '#696969', grass: '#009A00', rumble: '#BBBBBB'                   },
+  FOG:  '#334444',
+  LIGHT:  { road: '#6B6B6B', grass: '#cdac02', rumble: '#555555', lane: '#CCCCCC'  },
+  DARK:   { road: '#696969', grass: '#c4a504', rumble: '#BBBBBB'                   },
   START:  { road: 'white',   grass: 'white',   rumble: 'white'                     },
   FINISH: { road: 'black',   grass: 'black',   rumble: 'black'                     }
 };
@@ -409,6 +411,7 @@ var SPRITES = {
 SPRITES.SCALE = 0.3 * (1/SPRITES.PLAYER_STRAIGHT.w) // the reference sprite width should be 1/3rd the (half-)roadWidth
 
 SPRITES.BILLBOARDS = [SPRITES.BILLBOARD01, SPRITES.BILLBOARD02, SPRITES.BILLBOARD03, SPRITES.BILLBOARD04, SPRITES.BILLBOARD05, SPRITES.BILLBOARD06, SPRITES.BILLBOARD07, SPRITES.BILLBOARD08, SPRITES.BILLBOARD09];
-SPRITES.PLANTS     = [SPRITES.TREE1, SPRITES.TREE2, SPRITES.DEAD_TREE1, SPRITES.DEAD_TREE2, SPRITES.PALM_TREE, SPRITES.BUSH1, SPRITES.BUSH2, SPRITES.CACTUS, SPRITES.STUMP, SPRITES.BOULDER1, SPRITES.BOULDER2, SPRITES.BOULDER3];
+//SPRITES.PLANTS     = [SPRITES.TREE1, SPRITES.TREE2, SPRITES.DEAD_TREE1, SPRITES.DEAD_TREE2, SPRITES.PALM_TREE, SPRITES.BUSH1, SPRITES.BUSH2, SPRITES.CACTUS, SPRITES.STUMP, SPRITES.BOULDER1, SPRITES.BOULDER2, SPRITES.BOULDER3];
+SPRITES.PLANTS     = [SPRITES.TREE1, SPRITES.TREE2, SPRITES.DEAD_TREE1, SPRITES.DEAD_TREE2, SPRITES.PALM_TREE, SPRITES.BUSH2, SPRITES.CACTUS, SPRITES.STUMP, SPRITES.BOULDER1, SPRITES.BOULDER2];
 SPRITES.CARS       = [SPRITES.CAR01, SPRITES.CAR02, SPRITES.CAR03, SPRITES.CAR04, SPRITES.SEMI, SPRITES.TRUCK];
 
