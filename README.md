@@ -16,7 +16,7 @@ Updates:
 
 Retro Style 2D Racing Game
 
- * [play the game](https://angrybud.com/games/pixelracing)
+ * [latest playable version](https://pixelracing.cc/thegame/)
  * view the [source](https://github.com/angrybuddy/javascript-racer)
 
 A note on performance
