@@ -1,4 +1,4 @@
-2D Pixel Racing 
+Pixel Racing 
 ==========================
 (fork of Javascript Pseudo 3D Racer)
 
