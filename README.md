@@ -1,6 +1,6 @@
 Pixel Racing 
 ==========================
-(fork of Javascript Pseudo 3D Racer) [play it!](http://pixelracing.cc/)
+(fork of Javascript Pseudo 3D Racer) [play it!](https://angrybud.com/pixelracing)
 
 Updates:
 - touch controls added, for mobiles (see 'touch.js')
@@ -16,7 +16,7 @@ Updates:
 
 Retro Style 2D Racing Game
 
- * [latest playable version](http://pixelracing.cc/thegame/)
+ * [latest playable version](https://angrybud.com/pixelracing)
  * view the [source](https://github.com/angrybuddy/pixelracingcc)
 
 A note on performance
